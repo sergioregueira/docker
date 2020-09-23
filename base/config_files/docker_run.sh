@@ -98,7 +98,7 @@ if [ ! -f ./config/settings.inc.php ] && [ ! -f ./install.lock ]; then
         echo "\n* Running post-install script(s)..."
 
         for i in `ls /tmp/post-install-scripts/`;do
-            /tmp/post-install-scripts/$i
+            sh /tmp/post-install-scripts/$i
         done
     else
         echo "\n* No post-install script found, let's continue..."
